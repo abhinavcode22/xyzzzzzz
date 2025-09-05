@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #ffff;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}  
+#nav {
+  height: 130px;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  padding: 0 120px;
+  gap: 50px;
+  position: fixed;
+  justify-content: flex-start;
+  z-index: 999;
+}
+
+#nav img{
+    height: 80px;
+}
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  position: fixed;
+}
+#main {
+    /* display: flex; */
+    /* flex-direction: column; */
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.39);
+    
+}
+#page1 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  z-index: 10;
+}
+#page1 h1 {
+  font-size: 7.5vw;
+  font-weight: 900;
+  position: relative;
+}
+#page1 h1::before {
+  content: "EAT. DRINK. PLAY.";
+  position: absolute;
+  color: #000;
+  top: -5px;
+  left: -5px;
+  -webkit-text-stroke: 1.5px #95c11e;
+  z-index: -1;
+}
+#page1 h2{
+    font-size: 40px;
+    font-weight: 900;
+    
+}
+#page1 p{
+    font-size: 20px;
+    font-weight: 900;
+    width: 50%;
+    
+}
+#page2 {
+    min-height: 50vh;
+    width: 100%;
+    z-index: 10;
+    
+}
+#scroller{
+  display: inline-block;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  animation-name: scroll;
+  animation-duration: 25s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  
+}
+#scroller h3{
+  display: inline-block;
+  font-size: 105px;
+  font-weight: 800;
+  padding: 0 30px;
+  color: transparent;
+  transition: all linear 0.5s;
+  -webkit-text-stroke: 2px #95c11e
+}
+#scroller1{
+  display: inline-block;
+  white-space: nowrap;
+}
+#about-us{
+  height: 400px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  
+  padding: 0 20px;
+}
+#about-us img{
+  height: 200px;
+  width: 200px;
+  border-radius: 20%;
+  object-fit: cover;
+}
+#aboutusin{
+  width: 50%;
+  
+  justify-content: center;
+  text-align: center;
+
+}
+#aboutusin h3{
+  font-weight: 500;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+#aboutusin p{
+  font-weight: 500;
+  font-size: 22px;
+}
+#scroller::-webkit-scrollbar{
+  display: none;
+}
+#cards{
+  display: flex;
+  height: 70vh;
+  /* background-color: aquamarine; */
+  align-items: center;
+  justify-content: space-evenly;
+}
+.card{
+  height: 50vh;
+  width: 50vh;
+  border-radius: 10%;
+  background-color: #000;
+
+}
+@keyframes scroll{
+  from{
+    transform:translateX(0)
+  }
+  to{
+    transform: translateX(-100%);
+  }
+    
+}
+#scroller h3:hover{
+  color:#95c11e;
+}
+#card1{
+  background-image: url(https://plus.unsplash.com/premium_photo-1687279092363-4358de4bb58c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YW11c2VtZW50JTIwcGFya3xlbnwwfHwwfHx8MA%3D%3D);
+}
+#card2{
+  background-image: url(https://images.unsplash.com/photo-1534283542176-7cb0c9ac33e0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YW11c2VtZW50JTIwcGFya3xlbnwwfHwwfHx8MA%3D%3D);
+}
+#card3{
+  background-image: url(https://images.unsplash.com/photo-1597466599360-3b9775841aec?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGFtdXNlbWVudCUyMHBhcmt8ZW58MHx8MHx8fDA%3D);
+}
+.overlay{
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  height: 100%;
+  width: 100%;
+  background-color: rgb(96, 231, 96);
+  padding: 30px 20px;
+  border-radius: 10%;
+  opacity: 0;
+  transition: all ease 0.7s;
+
+}
+.overlay h3{
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.card:hover .overlay{
+  opacity: 1;
+}
+#page3{
+  height: 50vh;
+  width: 100%;
+  position: absolute;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  /* background-color: aquamarine; */
+}
+#page3 img{
+  height: 25px;
+  width:25px;
+}
+#page3 #colon1{
+  top: 22%;
+  position: absolute;
+  left: 22%;
+}
+#page3 p{
+  font-size: 25px;
+  font-weight: 620;
+  text-align: center;
+  width: 50vw;
+}
+#page3 #colon2{
+  bottom: 25%;
+  position: absolute;
+  right: 25%;
+}
